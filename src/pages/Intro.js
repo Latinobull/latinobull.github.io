@@ -13,13 +13,13 @@ const MyText = styled(Typography)({
   color: '#3D5B95',
   zIndex: 0,
   fontSize: 50,
-  backgroundColor: '#060607',
+  //   backgroundColor: '#060607',
 });
 const MyButton = styled(Button)({
   color: '#3D5B95',
   zIndex: 0,
   fontSize: 30,
-  backgroundColor: '#060607',
+  //   backgroundColor: '#060607',
 });
 export default function Intro() {
   const particlesInit = useCallback(async engine => {
@@ -177,7 +177,9 @@ export default function Intro() {
         </Fade>
         {animation && (
           <Fade bottom duration={3000}>
-            <MyButton variant="text">Click to enter</MyButton>
+            <MyButton variant="text" href={'/main'}>
+              Click to enter
+            </MyButton>
           </Fade>
         )}
       </MyGrid>
