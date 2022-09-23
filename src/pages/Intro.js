@@ -10,16 +10,16 @@ const MyGrid = styled(Grid)({
   minHeight: '100vh',
 });
 const MyText = styled(Typography)({
-  color: 'white',
+  color: '#3D5B95',
   zIndex: 0,
   fontSize: 50,
+  backgroundColor: '#060607',
 });
 const MyButton = styled(Button)({
-  color: 'red',
+  color: '#3D5B95',
   zIndex: 0,
   fontSize: 30,
-  backgroundColor: 'black',
-  boxShadow: 'red',
+  backgroundColor: '#060607',
 });
 export default function Intro() {
   const particlesInit = useCallback(async engine => {
@@ -61,7 +61,7 @@ export default function Intro() {
                 },
               },
               color: {
-                value: '#FF0000',
+                value: '#E3CDB3',
                 animation: {
                   enable: false,
                   speed: 20,
@@ -157,7 +157,7 @@ export default function Intro() {
             },
             retina_detect: true,
             background: {
-              color: '#000000',
+              color: '#060607',
               image: '',
               position: '50% 50%',
               repeat: 'no-repeat',
@@ -177,7 +177,7 @@ export default function Intro() {
         </Fade>
         {animation && (
           <Fade bottom duration={3000}>
-            <MyButton variant="outlined">Click to enter</MyButton>
+            <MyButton variant="text">Click to enter</MyButton>
           </Fade>
         )}
       </MyGrid>
