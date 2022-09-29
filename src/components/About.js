@@ -17,6 +17,7 @@ const SubHeader = styled(Typography)(() => ({
   color: '#2B4E63',
   fontFamily: 'monospace',
   maxWidth: '80vw',
+  textAlign: 'center',
 }));
 export default function About() {
   const [show, setShow] = useState(false);
@@ -36,7 +37,11 @@ export default function About() {
       <Grid
         container
         justifyContent={'space-around'}
-        style={{ height: '40vh', backgroundColor: '#AFB9C5' }}
+        style={{
+          backgroundColor: '#AFB9C5',
+          paddingTop: 100,
+          paddingBottom: 100,
+        }}
         alignItems={'center'}
       >
         <Flip right opposite>
@@ -49,16 +54,15 @@ export default function About() {
         <Flip right opposite delay={1000}>
           <MyName style={{ transform: 'rotate(90deg)' }}> George</MyName>
         </Flip>
-        <Grid container justifyContent={'center'}>
-          <SubHeader>
-            I am a Full Stack Developer leveraging a background in music to
-            build a more intuitive and efficient user experience on the web.
-            Known as an innovative problem-solver passionate about developing
-            apps, with a focus on backend, user interface, and authentication.
-            Strengths in meeting deadlines, understanding documentations and
-            teamwork.
-          </SubHeader>
-        </Grid>
+      </Grid>
+      <Grid container justifyContent={'center'}>
+        <SubHeader>
+          I am a Full Stack Developer leveraging a background in music to build
+          a more intuitive and efficient user experience on the web. Known as an
+          innovative problem-solver passionate about developing apps, with a
+          focus on backend, user interface, and authentication. Strengths in
+          meeting deadlines, understanding documentations and teamwork.
+        </SubHeader>
       </Grid>
     </div>
   );
