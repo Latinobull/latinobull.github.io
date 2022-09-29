@@ -1,10 +1,10 @@
 import React from 'react';
-// grey #E3CDB3
+// grey #AFB9C5
 
 export default function About() {
   return (
     <div>
-      <div>Hey</div>
+      <div style={{ height: '80vh', backgroundColor: '#AFB9C5' }}>Hey</div>
     </div>
   );
 }
