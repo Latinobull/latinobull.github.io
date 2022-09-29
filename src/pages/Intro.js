@@ -13,12 +13,14 @@ const MyText = styled(Typography)({
   color: '#3D5B95',
   zIndex: 0,
   fontSize: 50,
+  fontFamily: 'monospace',
   //   backgroundColor: '#060607',
 });
 const MyButton = styled(Button)({
   color: '#3D5B95',
   zIndex: 0,
   fontSize: 30,
+  fontFamily: 'monospace',
   //   backgroundColor: '#060607',
 });
 export default function Intro() {
