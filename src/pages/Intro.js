@@ -179,8 +179,8 @@ export default function Intro() {
         </Fade>
         {animation && (
           <Fade bottom duration={3000}>
-            <MyButton variant="text" href={'/main'}>
-              Click to enter
+            <MyButton variant="text" href={'/#/main'}>
+              Click to enter *WIP*
             </MyButton>
           </Fade>
         )}
