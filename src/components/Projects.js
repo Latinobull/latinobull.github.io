@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Grid, Typography } from '@mui/material';
+import { Grid, Link, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import { useState } from 'react';
@@ -24,12 +24,14 @@ export default function Projects() {
   const [data, setData] = useState({
     title: 'Project Title',
     deployed: 'Deployed Application Link',
+    description: 'abc123',
   });
 
   const projectContent = event => {
     const newData = {
       title: event.target.getAttribute('data-name'),
       deployed: event.target.getAttribute('data-link'),
+      description: event.target.getAttribute('data-description'),
     };
     setData(newData);
   };
@@ -50,6 +52,9 @@ export default function Projects() {
             }}
             data-name={'project1'}
             data-link={'https://www.google.com'}
+            data-description={
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac hendrerit nibh. Fusce vel ultrices neque. Nulla volutpat, tellus quis tristique malesuada, mi orci condimentum ipsum, in aliquet nulla augue a quam. Morbi ac justo fringilla, pulvinar erat ac, egestas ante. Etiam pellentesque faucibus elit at venenatis. Suspendisse tellus lectus.'
+            }
           >
             Main
           </ProjectItems>
@@ -60,6 +65,9 @@ export default function Projects() {
             }}
             data-name={'project2'}
             data-link={'https://www.google.com'}
+            data-description={
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac hendrerit nibh. Fusce vel ultrices neque. Nulla volutpat, tellus quis tristique malesuada, mi orci condimentum ipsum, in aliquet nulla augue a quam. Morbi ac justo fringilla, pulvinar erat ac, egestas ante. Etiam pellentesque faucibus elit at venenatis. Suspendisse tellus lectus.'
+            }
           >
             Secondary
           </ProjectItems>
@@ -70,6 +78,9 @@ export default function Projects() {
             }}
             data-name={'project3'}
             data-link={'https://www.google.com'}
+            data-description={
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac hendrerit nibh. Fusce vel ultrices neque. Nulla volutpat, tellus quis tristique malesuada, mi orci condimentum ipsum, in aliquet nulla augue a quam. Morbi ac justo fringilla, pulvinar erat ac, egestas ante. Etiam pellentesque faucibus elit at venenatis. Suspendisse tellus lectus.'
+            }
           >
             Forth
           </ProjectItems>
@@ -80,13 +91,21 @@ export default function Projects() {
             }}
             data-name={'project4'}
             data-link={'https://www.google.com'}
+            data-description={
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac hendrerit nibh. Fusce vel ultrices neque. Nulla volutpat, tellus quis tristique malesuada, mi orci condimentum ipsum, in aliquet nulla augue a quam. Morbi ac justo fringilla, pulvinar erat ac, egestas ante. Etiam pellentesque faucibus elit at venenatis. Suspendisse tellus lectus.'
+            }
           >
             Final
           </ProjectItems>
         </ProjectGrid>
-        <Box textAlign={'center'}>
+        <Box textAlign={'center'} sx={{ maxWidth: '40vw' }}>
           <Typography variant="h1">{data.title}</Typography>
-          <Typography variant="h6">{data.deployed}</Typography>
+          <Typography variant="p" sx={{ display: 'block' }}>
+            {data.description}
+          </Typography>
+          <Link variant="h6" href={data.deployed} target={'_blank'}>
+            Deployed App
+          </Link>
         </Box>
       </Grid>
     </div>
