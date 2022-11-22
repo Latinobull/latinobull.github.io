@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Intro from './pages/Intro';
 import Home from './pages/Home';
 function App() {
-  const base = window.location.host;
+  // const base = window.location.host;
   return (
     <div>
       <Router>

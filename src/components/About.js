@@ -22,7 +22,7 @@ export default function About() {
         container
         justifyContent={'space-around'}
         style={{
-          backgroundColor: '#AFB9C5',
+          backgroundColor: 'white',
           paddingTop: 100,
           paddingBottom: 100,
         }}
@@ -30,7 +30,7 @@ export default function About() {
       >
         <ImgEl src={myImg} />
         <SubHeader>
-          I am a Full Stack Developer leveraging a background in music to build
+          I am a Full Stack Developer and Instructor build
           a more intuitive and efficient user experience on the web. Known as an
           innovative problem-solver passionate about developing apps, with a
           focus on backend, user interface, and authentication. Strengths in
